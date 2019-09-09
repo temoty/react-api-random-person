@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 
 class FetchAUser extends Component {
-  
 
   state = {
     loading: true,
     person: null
   }
-
   async componentDidMount() {
   
 
@@ -16,12 +14,9 @@ class FetchAUser extends Component {
     const data = await response.json();
     this.setState({ person: data.results[0], loading: false });
 
-
   }
 
   render() {
-
-  
 
     return (
     <div className="App">
